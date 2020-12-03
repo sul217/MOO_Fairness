@@ -1,3 +1,7 @@
+This is the code for our work on Accuracy and Fairness Trade-offs in Machine Learning. Refer to the paper https://arxiv.org/pdf/2008.01132.pdf for more details. 
+
+## jupyter notebooks
+
 We provide three jupyter notebooks corresponding to four sets of trade-off results:
 
 Synthetic_data.ipynb  
@@ -12,9 +16,10 @@ Equal opportunity vs prediction loss, output trade-off results for single binary
 For each notebook, one can run all the cells with the giving parameters to get the trade-offs. The pre-run results are also contained in these notebooks. The results might differ from each run due to the stochasticity.
 
 
-Data 
+## Data 
 
 Data files are attached in the folder called 'data'.
+
 testData_seed6600451_param5.05.txt  synthetic data randomly generated using generate_synthetic_data.py
 
 Adult_income_gender_reduced.txt, Adult_income_race_reduced_smg.txt    from Adult income dataset (see https://archive.ics.uci.edu/ml/datasets/Adult), preprocess by one-hot ecoding and normalization, remove features "gender", "race", and highly predictive one--"fnlwgt", reduce dimension of feature "education" by combining severals categorical values and "country" to two classes--US and non-US.
@@ -22,7 +27,7 @@ Adult_income_gender_reduced.txt, Adult_income_race_reduced_smg.txt    from Adult
 CAMPAS_race.txt  The origin data can be found at https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv, see load_compas_data.py file for data preprocessing details (refer to source: https://github.com/mbilalzafar/fair-classification/tree/master/disparate_mistreatment/propublica_compas_data_demo).
 
 
-Python files
+## Python scripts
 
 The .py files serve as data preprocessing, PF-SMG algorithm, and bi-objective formulations.
 
