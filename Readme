@@ -1,6 +1,6 @@
-This is the code for our work on Accuracy and Fairness Trade-offs in Machine Learning. Refer to the paper https://arxiv.org/pdf/2008.01132.pdf for more details. 
+This is the code for our work on **Accuracy and Fairness Trade-offs in Machine Learning**. Refer to the paper https://arxiv.org/pdf/2008.01132.pdf for more details. 
 
-## jupyter notebooks
+##jupyter notebooks
 
 We provide three jupyter notebooks corresponding to four sets of trade-off results:
 
@@ -16,7 +16,7 @@ Equal opportunity vs prediction loss, output trade-off results for single binary
 For each notebook, one can run all the cells with the giving parameters to get the trade-offs. The pre-run results are also contained in these notebooks. The results might differ from each run due to the stochasticity.
 
 
-## Data 
+##Data 
 
 Data files are attached in the folder called 'data'.
 
@@ -27,7 +27,7 @@ Adult_income_gender_reduced.txt, Adult_income_race_reduced_smg.txt    from Adult
 CAMPAS_race.txt  The origin data can be found at https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv, see load_compas_data.py file for data preprocessing details (refer to source: https://github.com/mbilalzafar/fair-classification/tree/master/disparate_mistreatment/propublica_compas_data_demo).
 
 
-## Python scripts
+##Python scripts
 
 The .py files serve as data preprocessing, PF-SMG algorithm, and bi-objective formulations.
 
