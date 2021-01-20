@@ -55,6 +55,7 @@ The origin data can be found at [the github page](https://raw.githubusercontent.
 
 ## 5. Examples
 The figure below shows the full trade-off between accuracy and fairness w.r.t. disparate impact using Adult income dataset and taking gender as the sensitive attribute. 
+
 <img src="data/Adult_gender_DI.png" width="600px" style="float: right;">
 
 
