@@ -48,9 +48,13 @@ Data files are attached in the folder called 'data'.
 synthetic data randomly generated using generate_synthetic_data.py
 
 - `Adult_income_gender_reduced.txt`, `Adult_income_race_reduced_smg.txt`, and `Adult_income_race&gender_reduced_smg.txt`  
+Original dataset is downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Adult), preprocessed using one-hot ecoding and normalization, remove sensitive features "gender", "race", and a highly predictive feature--"fnlwgt", reduce dimension of "education" by combining severals categorical values and "country" into two classes--US and non-US.
 
-Downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Adult), preprocess by one-hot ecoding and normalization, remove features "gender", "race", and highly predictive one--"fnlwgt", reduce dimension of feature "education" by combining severals categorical values and "country" to two classes--US and non-US.
-
-- CAMPAS_race.txt  The origin data can be found at [the github page](https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv), see `load_compas_data.py` file for data preprocessing details ([Credit to Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez Rodriguez, and Krishna P. Gummadi](https://github.com/mbilalzafar/fair-classification/tree/master/disparate_mistreatment/propublica_compas_data_demo).
+- `CAMPAS_race.txt`  
+The origin data can be found at [the github page](https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv), see `load_compas_data.py` file for data preprocessing details ([Credit to Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez Rodriguez, and Krishna P. Gummadi](https://github.com/mbilalzafar/fair-classification/tree/master/disparate_mistreatment/propublica_compas_data_demo).
 
 ## 5. Examples
+
+## In case you cite our work please refer to the paper:
+
+S. Liu and L. N. Vicente.  Accuracy and fairness trade-offs in machine learning:  A stochastic multi-objective approach.ISE Technical Report 20T-016, Lehigh University, 2020.
