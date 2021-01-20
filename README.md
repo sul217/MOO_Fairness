@@ -54,8 +54,8 @@ Original dataset is downloaded from [UCI Machine Learning Repository](https://ar
 The origin data can be found at [the github page](https://raw.githubusercontent.com/propublica/compas-analysis/master/compas-scores-two-years.csv), see `load_compas_data.py` file for data preprocessing details ([Credit to Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez Rodriguez, and Krishna P. Gummadi](https://github.com/mbilalzafar/fair-classification/tree/master/disparate_mistreatment/propublica_compas_data_demo).
 
 ## 5. Examples
-The figure below shows the full trade-off between accuracy and fairness w.r.t. disparate impact.
-<img src="data/Adult_gender_DI.png" width="500px" style="float: right;">
+The figure below shows the full trade-off between accuracy and fairness w.r.t. disparate impact using Adult income dataset and taking gender as the sensitive attribute. 
+<img src="data/Adult_gender_DI.png" width="600px" style="float: right;">
 
 
 ## In case you cite our work please refer to the paper:
