@@ -55,7 +55,7 @@ The origin data can be found at [the github page](https://raw.githubusercontent.
 
 ## 5. Examples
 The figure below shows the full trade-off between accuracy and fairness w.r.t. disparate impact.
-<img src="MOO_Fairness/data/Adult_gender_DI.png" width="500px" style="float: right;">
+<img src="data/Adult_gender_DI.png" width="500px" style="float: right;">
 
 
 ## In case you cite our work please refer to the paper:
