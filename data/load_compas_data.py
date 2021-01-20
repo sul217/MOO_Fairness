@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+
+''' 
+This file was token from https://github.com/mbilalzafar/fair-classification/tree/master/disparate_impact/synthetic_data_demo
+Credit to Muhammad Bilal Zafar
+Reference:
+Fairness Beyond Disparate Treatment & Disparate Impact: Learning Classification without Disparate Mistreatment
+Muhammad Bilal Zafar, Isabel Valera, Manuel Gomez Rodriguez, Krishna P. Gummadi.
+26th International World Wide Web Conference (WWW), Perth, Australia, April 2017.
+'''
 
 
 from __future__ import division
@@ -46,6 +54,14 @@ def check_data_file(fname):
 
 # In[4]:
 
+def add_intercept(x):
+
+    """ Add intercept to the data before linear classification """
+    m,n = x.shape
+    intercept = np.ones(m).reshape(m, 1) # the constant b
+    return np.concatenate((intercept, x), axis = 1)
+
+
 
 def load_compas_data():
     FEATURES_CLASSIFICATION = ["age_cat", "race", "sex", "priors_count", "c_charge_degree"] #features to be used for classification
@@ -89,11 +105,12 @@ def load_compas_data():
 
     """ Feature normalization and one hot encoding """
     
-    # convert class label 0 to -1
+    # convert class label 1 to -1 (denote recidivating case) and 0 to 1 (denote non-recidivating case)
     y = data[CLASS_FEATURE]
-    y[y==0] = -1
+    y[y==1] = -1
+    y[y==0] = 1
     
-    
+    print pd.Series(y)
     print "\nNumber of people recidivating within two years"
     print pd.Series(y).value_counts()
     print "\n"
@@ -145,7 +162,7 @@ def load_compas_data():
     for k in x_control.keys():
         x_control[k] = x_control[k][perm]
     
-    X = ut.add_intercept(X)
+    X = add_intercept(X)
     feature_names = ["intercept"] + feature_names
     assert(len(feature_names) == X.shape[1])
     print "Features we will be using for classification are:", feature_names, "\n"

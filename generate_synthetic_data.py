@@ -1,17 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-## This file was originated from https://github.com/mbilalzafar/fair-classification/tree/master/disparate_impact/synthetic_data_demo
+''' 
+This file was token from https://github.com/mbilalzafar/fair-classification/tree/master/disparate_impact/synthetic_data_demo
+Credit to Muhammad Bilal Zafar
+'''
 
 import math
 import numpy as np
 import matplotlib.pyplot as plt 
 from random import seed, shuffle
 from scipy.stats import multivariate_normal # generating synthetic data
-
-
-# In[24]:
 
 
 def generate_synthetic_data(SEED, param, plot_data=False):
@@ -46,7 +45,7 @@ def generate_synthetic_data(SEED, param, plot_data=False):
     y = np.hstack((y1, y2))
 
     # shuffle the data
-    perm = range(0, n_samples*2)
+    perm = list(range(0, n_samples*2))
     shuffle(perm)
     X = X[perm]
     y = y[perm]
@@ -108,7 +107,7 @@ def generate_synthetic_data(SEED, param, plot_data=False):
     full_data = np.zeros([n_samples*2, 4])
     full_data[:, 0] = y
     full_data[:, 1:3] = X
-    full_data[:, 3] = x_control.values()[0]
+    full_data[:, 3] = list(x_control.values())[0]
     np.savetxt("data/testData_seed%s_param%s.txt"%(SEED, param), full_data, fmt='%.6f')
     
     return X, y, x_control
